@@ -24,8 +24,8 @@ public class SituacaoDBTest {
     public void testSomeMethod() {
         SituacaoController sit = new SituacaoController();
         
-        ArrayList<Situacao> sit1 = (ArrayList<Situacao>) sit.listaSituacao();
-        sit1.toString();
+//        ArrayList<Situacao> sit1 = (ArrayList<Situacao>) sit.listaSituacao();
+  //      sit1.toString();
     }
     
 }

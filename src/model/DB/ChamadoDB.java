@@ -27,7 +27,7 @@ public class ChamadoDB {
     
     public boolean insert(Chamado chamado){
         PreparedStatement stmt  = null;
-        String sql = "INSERT INTO chamado (titulo, descricao,  situacao_id, data,  categoria_id, usuario_id, ativo)  values (?, ?, ?, ?, ?, ?, 1)";
+        String sql = "INSERT INTO chamado (titulo, descricao,  situacao_id,  categoria_id, usuario_id, ativo)  values (?, ?, ?, ?, ?, 1)";
         
        
         try {
@@ -35,9 +35,9 @@ public class ChamadoDB {
             stmt.setString(1, chamado.getTitulo());
             stmt.setString(2, chamado.getDescricao());
             stmt.setInt(3, chamado.getSituacao());
-            stmt.setString(4, chamado.getData());
-            stmt.setInt(5, chamado.getIDCategoria());
-            stmt.setInt(6, 1);
+            //stmt.setString(4, chamado.getData());
+            stmt.setInt(4, chamado.getIDCategoria());
+            stmt.setInt(5, 1);
             stmt.executeUpdate();
             return true;
         } catch (SQLException ex) {
