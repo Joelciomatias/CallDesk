@@ -4,14 +4,18 @@
  * and open the template in the editor.
  */
 package Connection;
+
+import View.Login;
 /**
  *
  * @author K
  */
 public class Aplicacao {
+   
     public static void main(String[] args){
         ConnectionFactory c1 = new ConnectionFactory();
         c1.getConnection();
+        new Login().setVisible(true);
     }
     
 }

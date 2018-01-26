@@ -32,5 +32,16 @@ public class Categoria {
         this.descricao = descricao;
     }
     
+    public Categoria ID(int id){
+        this.id = id;
+        return null;
+    }
+
+    @Override
+    public String toString() {
+        return getDescricao();
+    }
+    
+    
     
 }

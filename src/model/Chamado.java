@@ -5,15 +5,35 @@
  */
 package Model;
 
-public class Chamado {
+
+public class Chamado extends Usuario  {
 
     private int id;
     private String titulo;
     private String descricao;
-    private Categoria categoria;
-    private int status;
-    private Usuario usuario;
+    private String solucao;
+    private int IDCategoria;
+    private int situacao;
+    private String data;
+    private int IDUsuario;
+  
     
+    
+    public int getIDUsuario() {
+        return IDUsuario;
+    }
+
+    public void setIDUsuario(int IDUsuario) {
+        this.IDUsuario = IDUsuario;
+    }
+
+    public String getSolucao() {
+        return solucao;
+    }
+
+    public void setSolucao(String solucao) {
+        this.solucao = solucao;
+    }
 
     public int getId() {
         return id;
@@ -39,41 +59,61 @@ public class Chamado {
         this.descricao = descricao;
     }
 
-    public Categoria getCategoria() {
-        return categoria;
+ 
+
+    public int getSituacao() {
+        return situacao;
     }
 
-    public void setCategoria(Categoria categoria) {
-        this.categoria = categoria;
+    public void setSituacao(int situacao) {
+        this.situacao = situacao;
     }
 
-    public int getStatus() {
-        return status;
+ 
+
+    public int getIDCategoria() {
+        return IDCategoria;
     }
 
-    public void setStatus(int status) {
-        this.status = status;
+    public void setIDCategoria(int IDCategoria) {
+        this.IDCategoria = IDCategoria;
     }
 
+ 
+ 
 
-    public Usuario getUsuario() {
+/*
+    public Usuario getIdUsuario() {
         return usuario;
     }
 
     public void setUsuario(Usuario usuario) {
         this.usuario = usuario;
     }
-
+    */
   
     public Chamado() {
     }
 
-    public Chamado(String titulo, String descricao, Categoria categoria, int status, Usuario usuario) {
+ 
+    public Chamado(String titulo, String descricao, int IDCategoria, int situacao_id,String data, int IDUsuario) {
         this.titulo = titulo;
         this.descricao = descricao;
-        this.categoria = categoria;
-        this.status = status;
-        this.usuario = usuario;
+        this.IDCategoria = IDCategoria;
+        this.situacao = situacao_id;
+        this.data = data;
+        this.IDUsuario = IDUsuario;
     }
+
+    public String getData() {
+        return data;
+    }
+
+    public void setData(String data) {
+        this.data = data;
+    }
+
+
+
 
 }

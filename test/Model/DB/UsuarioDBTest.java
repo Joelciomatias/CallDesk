@@ -3,15 +3,15 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Model.DB;
+package model.DB;
 
-import Model.Usuario;
+import Model.DB.UsuarioDB;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
 /**
  *
- * @author K
+ * @author lucas
  */
 public class UsuarioDBTest {
     
@@ -19,14 +19,9 @@ public class UsuarioDBTest {
     }
 
     @Test
-    public void inserirUsuario() {
-        Usuario user = new Usuario("Lucas", "TI", "l.knaabaabasen@hotmail.com", "0152");
+    public void testSomeMethod() {
         UsuarioDB db = new UsuarioDB();
-        if(db.insert(user)){
-            System.out.println("Uusario " +user.getNome()+ " Cadastrado com sucesso");
-        }else{
-            System.out.println("Erro ao cadastrar o usuario " +user.getNome());
-        }
+        db.verificaEmail("admin");
     }
     
 }

@@ -10,6 +10,9 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -20,7 +23,7 @@ public class ConnectionFactory {
     private static final String DRIVER = "com.mysql.jdbc.Driver";
     private static final String URL = "jdbc:mysql://localhost:3306/calldesk";
     private static final String USER = "root";
-    private static final String PASS = "";
+    private static final String PASS = "qaz789pwd";
 
     public static Connection getConnection() {
 
@@ -69,5 +72,20 @@ public class ConnectionFactory {
         }
 
         closeConnection(con, stmt);
+        
     }
-}
+    public void executeSql(String sql){
+        Statement stmt = null;
+        
+        
+            try {
+                stmt = getConnection().createStatement();
+                ResultSet rs = stmt.executeQuery(sql);
+            } catch (SQLException ex) {
+                Logger.getLogger(ConnectionFactory.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            
+        }
+    }
+    
+
